@@ -2,35 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="description" content="Frontend Mentor Challenge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/default.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <article class="card">
+    <div class="card-photo-container">
+      <img src="images/drawers.jpg" alt="" role="presentation" class="card-photo">
+    </div>
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+    <div class="card-body">
+      <h1>Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h1>
+      <p>
+        Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I've got some simple tips 
+        to help you make any room feel complete.
+      </p>
+    </div>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+    <footer>
+      <img src="images/avatar-michelle.jpg" alt="Photo of Michelle Appleton" class="card-poster-picture">
+      <div class="card-poster-details">
+        <span class="card-poster-name">Michelle Appleton</span>
+        <time pubdate datetime="2020-06-28T00:00" class="card-poster-date">28 Jun 2020</time>
+      </div>
+      <!-- Social bar for smaller screens -->
+      <div id="social-bar" class="social social-bar">
+        <span class="social-bar-text">Share</span>
+        <a href="#" class="social-bar-link">
+          <img src="images/icon-facebook.svg" alt="Click to share via Facebook">
+        </a>
+        <a href="#" class="social-bar-link">
+          <img src="images/icon-twitter.svg" alt="Click to share via Twitter">
+        </a>
+        <a href="#" class="social-bar-link">
+          <img src="images/icon-pinterest.svg" alt="Click to share via Pinterest">
+        </a>
+      </div>
+      <div class="card-share-button-container">
+        <button id="card-share-button" class="card-share-button" onclick="toggleSocial()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" aria-label="Click to share">
+            <path class="share-icon" fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+          </svg>
+        </button>
+        <!-- Social popup for larger screens -->
+        <div id="social-popup" class="social social-popup">
+          <span class="social-bar-text">Share</span>
+          <a href="#" class="social-popup-link">
+            <img src="images/icon-facebook.svg" alt="Click to share via Facebook">
+          </a>
+          <a href="#" class="social-popup-link">
+            <img src="images/icon-twitter.svg" alt="Click to share via Twitter">
+          </a>
+          <a href="#" class="social-popup-link">
+            <img src="images/icon-pinterest.svg" alt="Click to share via Pinterest">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </article>
 
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="js/default.js"></script>
 </body>
 </html>
