@@ -140,6 +140,7 @@ body {
   width: 16rem;
   justify-content: center;
   opacity: 0;
+  box-shadow: 0px 10px 10px hsla(240, 6%, 50%, 0.2);
 }
 
 /* Popup bottom pointer */
